@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 
 //import createStore and applyMiddleware
 import { createStore, applyMiddleware } from 'redux';
-import { Povider } from 'react-redux'
+import { Provider } from 'react-redux'
 import thunk from 'redux-thunk'
 import { smurfReducer } from './reducers/smurfReducer.js'
 

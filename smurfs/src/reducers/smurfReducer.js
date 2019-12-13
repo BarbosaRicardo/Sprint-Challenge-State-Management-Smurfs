@@ -1,5 +1,5 @@
 const initialState ={
-
+    smurfs: []
 }
 
 export function smurfReducer(state = initialState, action) {
@@ -7,6 +7,13 @@ export function smurfReducer(state = initialState, action) {
         case 'GET_SMURFS':
             return {
                 smurfs: action.payload
+            }
+        case 'POST_SMURF':
+            return {
+                smurfs: [
+                    ...state.smurf,
+                    action.payload
+                ]
             }
 
             default: return state;
