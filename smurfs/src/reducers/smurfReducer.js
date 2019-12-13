@@ -11,7 +11,7 @@ export function smurfReducer(state = initialState, action) {
         case 'POST_SMURF':
             return {
                 smurfs: [
-                    ...state.smurf,
+                    ...state.smurfs,
                     action.payload
                 ]
             }

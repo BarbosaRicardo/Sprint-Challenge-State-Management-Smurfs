@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { connect } from 'react-redux'
 import './App.css'
-import { getSmurfs } from '../actions/getSmurfs.js/index.js'
+import { getSmurfs } from '../actions/getSmurfs.js'
+import { postSmurf } from '../actions/postSmurf.js'
 
 
 function App(props) {
@@ -26,17 +27,17 @@ function App(props) {
     setHeight('')
   }; //end of handleSubmit 
 
-  handleNameChange = event => {
+  const handleNameChange = event => {
     event.preventDefault();
     setName(event.target.value)
   }; //end of handleNameChange
 
-  handleAgeChange = event => {
+  const handleAgeChange = event => {
     event.preventDefault();
     setAge(event.target.value)
   }; //end of handleAgeChange
 
-  handleHeightChange = event => {
+  const handleHeightChange = event => {
     event.preventDefault();
     setHeight(event.target.value)
   }; //end of handleHeightChange
