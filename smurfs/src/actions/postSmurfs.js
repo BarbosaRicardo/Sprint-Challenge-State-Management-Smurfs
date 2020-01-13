@@ -5,7 +5,7 @@ export function postSmurf(formData) {
    return dispatch => {
       dispatch ( {type: POST_SMURFS, payload: formData} )
       axios
-         .post('http://localhost:333/smurfs', formData)
+         .post('http://localhost:3333/smurfs', formData)
          .then((res) => {
             console.log(res)
          })
