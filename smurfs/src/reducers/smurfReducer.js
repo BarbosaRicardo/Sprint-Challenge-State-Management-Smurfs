@@ -6,7 +6,7 @@ export function smurfReducer(state = initialState, action) {
    switch(action.type) {
       case 'GET_SMURFS':
          return {
-            smurfs.action.payload
+            smurfs:action.payload
          }
 
       case 'POST_SMURF':

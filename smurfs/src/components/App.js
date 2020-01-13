@@ -53,19 +53,30 @@ function App(props) {
 
       </form>
 
-
-
-
+      <div className = 'smurf-cards'>
+        {props.smurfs.map((smurf) => {
+          return <div className='smurf-card' key={smurf.id}>
+            <h2>{smurf.name}</h2>
+            <h3>Age: {smurf.age}</h3>
+            <h3>Height:{smurf.height}</h3>
+      </div>
+      })}
 
     </div>
+    </div>
   )
+}; 
 
-
-
-
-
-
-
-
+function mapStateToProps(state) {
+  return{
+    smurfs:state.smurfs
+  }
 }
+
+const mapDispatchToProps = {
+  getSmurfs,
+  postSmurf
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
   
