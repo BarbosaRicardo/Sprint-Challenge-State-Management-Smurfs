@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { connect } from 'react-redux'
 import './App.css'
-import {getSmurfs} from '../actions/getSmurfs.js'
-import {postSmurf} from '../actions/postSmurf.js'
+import {getSmurfs} from '../actions/getSmurfs'
+import {postSmurf} from '../actions/postSmurfs'
 
 function App(props) {
   const [name, setName] = useState('');
@@ -11,7 +11,7 @@ function App(props) {
 
   useEffect(() => {
     props.getSmurfs();
-  }, [])
+  }, [props])
 
   const handleSubmit = e => {
     e.preventDefault()
