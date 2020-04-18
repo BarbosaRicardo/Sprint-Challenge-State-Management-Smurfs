@@ -67,6 +67,7 @@ function App(props) {
   ); //end of return statement 
 }; //end of App
 
+
 function mapStateToProps(state) {
   return {
     smurfs: state.smurfs
